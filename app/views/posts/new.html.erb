@@ -1,0 +1,267 @@
+<head>
+    <style>
+        #buttons {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #buttons li {
+            display: inline;
+        }
+
+        #buttons input[type="radio"] {
+            display: none;
+        }
+
+        #buttons input[type="radio"]:checked + label,
+        .Checked + label {
+            background: #535353;
+            color: #fff
+        }
+
+        #buttons label {
+            cursor: pointer;
+        }
+
+        #text {
+            display: none;
+        }
+
+        #photo {
+            display: none;
+        }
+
+        #video {
+            display: none;
+        }
+
+        #link {
+            display: none;
+        }
+    </style>
+
+<%= javascript_tag do %>
+function openForm(evt, posttype) {
+    var forms, formselect;
+
+    forms = document.getElementsByClassName("form");
+    for (var i = 0; i < forms.length; i++) {
+        forms[i].style.display = "none";
+    };
+
+    formselects = document.getElementsByClassName("formselect");
+    for (var j = 0; i < formselects.length; j++) {
+        formselects[j].className = formselects[j].className.replace(":target", "");
+    };
+
+    document.getElementById(posttype).style.display = "block";
+    evt.currentTarget.className += ":target";
+};
+<% end %>
+
+</head>
+
+<section class="engine"><a rel="external" href="https://mobirise.com">mobirise.com</a></section><section class="mbr-section mbr-section__container article mbr-after-navbar" id="header3-e" style="background-color: rgb(255, 255, 255); padding-top: 100px; padding-bottom: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="mbr-section-title display-2">New Post</h3>
+                <small class="mbr-section-subtitle">Create a new post.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mbr-section mbr-section__container" id="buttons1-q" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="text-xs-center" id="buttons">
+                <li>
+                <input type="radio" name="buttons" class="btn btn-black-outline formselect" id='textselect' onclick="openForm(event, 'text')"/>
+                <label for="textselect" class="btn btn-black-outline">TEXT</label>
+                </li>
+                <li>
+                <input type="radio" name="buttons" class="btn btn-black-outline formselect" id='photoselect' onclick="openForm(event, 'photo')"/>
+                <label for="photoselect" class="btn btn-black-outline">PHOTO</label>
+                </li>
+                <li>
+                <input type="radio" name="buttons" class="btn btn-black-outline formselect" id='videoselect' onclick="openForm(event, 'video')"/>
+                <label for="videoselect" class="btn btn-black-outline">VIDEO</label>
+                </li>
+                <li>
+                <input type="radio" name="buttons" class="btn btn-black-outline formselect" id='linkselect' onclick="openForm(event, 'link')"/>
+                <label for="linkselect" class="btn btn-black-outline">LINK</label>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="mbr-section" id="form1-t" style="background-color: rgb(255, 255, 255); padding-top: 10px;">
+    <div class="mbr-section mbr-section-nopadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
+
+                    <div data-form-alert="true">
+                        <div hidden="" data-form-alert-success="true" class="alert alert-form alert-success text-xs-center">Thanks for filling out form!</div>
+                    </div>
+                    
+                        <!--<input type="hidden" value="hHN1/3wqgVb/951+u51IWB0OvciNmFG5tc2UYirI83zbjo5ajKEx3KPj0TThhW2TuTDwxk/5Z2lhW3GcrBSw7mWejVD4cavdwG705eAuVh+Yw9R571ETPxY/qVpJAnm2" data-form-email="true">-->
+
+                        <%= form_for :post, url: '/post' do |f| %>
+
+                        <div class="row row-sm-offset form" id="text">
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-title">Title</label>
+                                    <%= f.text_field :title, :class => 'form-control', :name => 'title', :id => 'form1-t-title' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-content">Content</label>
+                                    <%= f.text_area :content, :class => 'form-control', :name => 'content', :rows => '7', :id => 'form1-t-content', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-tags">Tags</label>
+                                    <%= f.text_field :tags, :class => 'form-control', :name => 'tags', :id => 'form1-t-tags', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div><%= f.submit "POST", class: "btn btn-primary" %></div>
+
+                        </div>
+
+                        <% end %>
+
+                        <%= form_for :post, url: '/post' do |f| %>
+
+                        <div class="row row-sm-offset form" id="photo">
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-extdata">Photo</label>
+                                    <%= f.text_field :extdata, :class => 'form-control', :name => 'extdata', :id => 'form1-t-extdata', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-title">Title</label>
+                                    <%= f.text_field :title, :class => 'form-control', :name => 'title', :id => 'form1-t-title' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-content">Content</label>
+                                    <%= f.text_area :content, :class => 'form-control', :name => 'content', :rows => '7', :id => 'form1-t-content' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-tags">Tags</label>
+                                    <%= f.text_field :tags, :class => 'form-control', :name => 'tags', :id => 'form1-t-tags', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div><%= f.submit "POST", class: "btn btn-primary" %></div>
+
+                        </div>
+
+                        <% end %>
+
+                        <%= form_for :post, url: '/post' do |f| %>
+
+                        <div class="row row-sm-offset form" id="video">
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-extdata">Video</label>
+                                    <%= f.text_field :extdata, :class => 'form-control', :name => 'extdata', :id => 'form1-t-extdata', :required => 'true'%>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-title">Title</label>
+                                    <%= f.text_field :title, :class => 'form-control', :name => 'title', :id => 'form1-t-title' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-content">Content</label>
+                                    <%= f.text_area :content, :class => 'form-control', :name => 'content', :rows => '7', :id => 'form1-t-content' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-tags">Tags</label>
+                                    <%= f.text_field :tags, :class => 'form-control', :name => 'tags', :id => 'form1-t-tags', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div><%= f.submit "POST", class: "btn btn-primary" %></div>
+
+                        </div>
+
+                        <% end %>
+
+                        <%= form_for :post, url: '/post' do |f| %>
+
+                        <div class="row row-sm-offset form" id="link">
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-extdata">Link</label>
+                                    <%= f.text_field :extdata, :class => 'form-control', :name => 'extdata', :id => 'form1-t-extdata', :required => 'true'%>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-title">Title</label>
+                                    <%= f.text_field :title, :class => 'form-control', :name => 'title', :id => 'form1-t-title' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-content">Content</label>
+                                    <%= f.text_area :content, :class => 'form-control', :name => 'content', :rows => '7', :id => 'form1-t-content' %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-t-tags">Tags</label>
+                                    <%= f.text_field :tags, :class => 'form-control', :name => 'tags', :id => 'form1-t-tags', :required => 'true' %>
+                                </div>
+                            </div>
+
+                            <div><%= f.submit "POST", class: "btn btn-primary" %></div>
+
+                        </div>
+
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

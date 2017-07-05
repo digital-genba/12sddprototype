@@ -1,0 +1,9 @@
+class LoggedInRoutesConstraint
+  def initialize
+    @session = session[:user_id]
+  end
+ 
+  def matches?(request)
+    @ips.include?(request.remote_ip)
+  end
+end

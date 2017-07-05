@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: dev_db
+  pool: 5
+  timeout: 5000
+  username: kkschool
+  password:

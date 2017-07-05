@@ -1,0 +1,15 @@
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+/usr/bin/ruby2.3 -r ./siteconf20170501-17064-1823q04.rb extconf.rb
+creating Makefile
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20170501-17064-svh115

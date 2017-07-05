@@ -1,0 +1,13 @@
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/json-1.8.6/ext/json
+/usr/bin/ruby2.3 -r ./siteconf20170501-17064-mqclfq.rb extconf.rb
+creating Makefile
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

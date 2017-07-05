@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v3.12.1, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag "black-and-white-logo-optimised-transparent-icon-128x158.png" %>
+  <meta name="description" content="">
+  <title><%= @title || "The Komplex" %></title>
+  
+  
+  
+</head>
+<body>
+<section id="ext_menu-4">
+
+    <nav class="navbar navbar-dropdown">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <%= link_to "The KOMPLEX", root_path, :class => "navbar-caption text-primary" %>
+                    </div>
+
+                </div>
+
+                <% unless current_user == nil %>
+
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                    
+                    <li class="nav-item"><%= link_to "YOUR FEED", root_path, :class => "nav-link link" %></li>
+                    <li class="nav-item"><%= link_to "PROFILE", user_path(current_user), :class => "nav-link link" %></li>
+                    <li class="nav-item"><%= link_to "SETTINGS", root_path, :class => "nav-link link" %></li>
+                    <li class="nav-item"><%= link_to "LOGOUT", logout_url, :class => "nav-link link", :method => :delete %></li>
+                    <li class="nav-item nav-btn"><%= link_to "NEWPOST", newpost_url, :class => "nav-link btn btn-primary" %></li>
+                    
+                    </ul>
+
+
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+
+                <% end %>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+
+
+<!-- specific page content will render here -->
+<%= yield %>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>

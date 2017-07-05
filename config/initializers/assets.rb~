@@ -1,0 +1,9 @@
+Rails.application.config.assets.precompile += %w( tether/tether.min.css )
+Rails.application.config.assets.precompile += %w( bootstrap/css/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( dropdown/css/style.css )
+Rails.application.config.assets.precompile += %w( animate.css/animate.min.css )
+Rails.application.config.assets.precompile += %w( theme/css/style.css )
+Rails.application.config.assets.precompile += %w( mobirise/css/mbr-additional.css )
+Rails.application.config.assets.precompile += %w( googleapi-fonts/Lora:400,700,400italic,700italic&amp;subset=latin.css )
+Rails.application.config.assets.precompile += %w( googleapi-fonts/Montserrat:400,700.css )
+

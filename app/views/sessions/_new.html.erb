@@ -1,0 +1,45 @@
+<section class="engine"><a rel="external" href="https://mobirise.com">Site Maker</a></section><section class="mbr-section mbr-after-navbar" id="form1-7" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+    
+    <div class="mbr-section mbr-section__container mbr-section__container--middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-xs-center">
+                    <h3 class="mbr-section-title display-2">LOGIN</h3>
+                    <small class="mbr-section-subtitle">Login to your account, or <a href="login.html#form1-8">sign up</a> to start using The Komplex.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mbr-section mbr-section-nopadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
+
+                    <%= form_for(:session, url: login_path) do |f| %>  
+                        
+                        <div class="row row-sm-offset">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-7-email">Email</label>
+                                    <%= f.email_field :email, :placeholder => "Email", :id => "form1-7-email", :class => "form-control" %>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="form1-7-password">Password</label>
+                                    <%= f.password_field :password, :placeholder => "Password", :id => "form1-7-password", :class => "form-control" %>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div><%= f.submit "LOGIN", class: "btn btn-primary", :type => "submit" %></div>
+
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

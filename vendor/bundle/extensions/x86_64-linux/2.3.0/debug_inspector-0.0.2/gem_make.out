@@ -1,0 +1,15 @@
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+/usr/bin/ruby2.3 -r ./siteconf20170501-17064-145tb1r.rb extconf.rb
+creating Makefile
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20170501-17064-189ju2m

@@ -1,0 +1,15 @@
+class CreateUsers < ActiveRecord::Migration
+  def change
+    drop_table :users
+    create_table :users do |t|
+      t.string :fullname
+      t.string :email
+      t.string :username
+      t.string :password_digest
+      t.string :likes, array: true
+      t.string :dislikes, array: true
+
+      t.timestamps null: false
+    end
+  end
+end

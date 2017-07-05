@@ -1,0 +1,19 @@
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+/usr/bin/ruby2.3 -r ./siteconf20170501-17064-ryc68c.rb extconf.rb
+creating Makefile
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /media/kkschool/storage/OneDrive - Hunter Valley Grammar School 1/Y12/SDD/KomplexRails/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20170501-17064-1630jbj
